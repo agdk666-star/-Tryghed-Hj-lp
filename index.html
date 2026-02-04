@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tryghed & Hjælp</title>
+  <meta name="description" content="En enkel side lavet af en 9. klasse om fællesskab, pres og hvor man kan få hjælp." />
+  <style>
+    :root{
+      --bg:#f5f7fb;
+      --card:#ffffff;
+      --text:#1b1f2a;
+      --muted:#4b5563;
+      --border:#e6eaf2;
+      --accent:#1f6feb;
+      --accent2:#0ea5e9;
+      --ok:#0f766e;
+      --warn:#b45309;
+      --shadow: 0 10px 25px rgba(16,24,40,.08);
+      --radius:16px;
+      --max:920px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.55;
+    }
+    header{
+      background: var(--card);
+      border-bottom:1px solid var(--border);
+      position: sticky;
+      top:0;
+      z-index:5;
+    }
+    .nav{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 12px 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+    .logo{
+      width:14px; height:14px; border-radius:999px;
+      background: linear-gradient(135deg, var(--accent2), var(--accent));
+    }
+    .nav a{
+      text-decoration:none;
+      color: var(--muted);
+      font-weight:700;
+      padding:8px 10px;
+      border-radius:999px;
+    }
+    .nav a:hover{background:#eef3ff; color:var(--text);}
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px 16px 60px;
+    }
+    .card{
+      background: var(--card);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(26px, 3.6vw, 36px);
+      line-height:1.15;
+    }
+    h2{margin:0 0 8px; font-size:20px}
+    p{margin:0 0 10px; color:var(--muted)}
+    ul{margin:8px 0 0 18px; color:var(--muted)}
+    li{margin:6px 0}
+    .cta{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top: 10px;
+    }
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background:#f3f6ff;
+      color: var(--text);
+      font-weight:800;
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, #e7f0ff, #e0f7ff);
+      border-color: #cfe3ff;
+    }
+    .pill{
+      display:inline-block;
+      font-size:13px;
+      font-weight:800;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      color: var(--muted);
+      background:#fafbff;
+      margin-right:8px;
+      margin-top:8px;
+    }
+    .box-ok{
+      border-left: 5px solid var(--ok);
+      background:#ecfdfb;
+      padding:12px;
+      border-radius:12px;
+      color:#0f3d3a;
+      font-weight:700;
+      margin-top:10px;
+    }
+    .box-warn{
+      border-left: 5px solid var(--warn);
+      background:#fff7ed;
+      padding:12px;
+      border-radius:12px;
+      color:#5a2a05;
+      font-weight:700;
+      margin-top:10px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    @media (max-width: 760px){
+      .grid{grid-template-columns: 1fr;}
+      .nav a{display:none;}
+    }
+    footer{
+      margin-top: 18px;
+      text-align:center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .small{font-size:13px}
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <span class="logo"></span>
+        <span>Tryghed & Hjælp</span>
+      </div>
+      <div style="display:flex; gap:6px;">
+        <a href="#hvad">Hvad er det?</a>
+        <a href="#tegn">Tegn</a>
+        <a href="#hjælp">Hjælp</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="card">
+      <h1>Hvis du føler dig presset, så læs her</h1>
+      <p>
+        Vi er en 9. klasse, og vi har lavet den her side til vores projekt om social arv, socialisering og kriminalitet.
+        Ideen er, at det skal være nemt at finde information og hjælp, uden at man skal stå og læse en plakat på gangen.
+      </p>
+
+      <span class="pill">Hurtig adgang</span>
+      <span class="pill">Diskret</span>
+      <span class="pill">Hjælp findes</span>
+
+      <div class="cta">
+        <a class="btn primary" href="#hjælp">Gå til hjælp</a>
+        <a class="btn" href="#tegn">Se tegn</a>
+      </div>
+
+      <div class="box-warn">
+        Hvis du er i fare lige nu: ring 112. Hvis det ikke er akut, men du har brug for hjælp: ring 114.
+      </div>
+    </section>
+
+    <section id="hvad" class="card">
+      <h2>Hvad handler det her om?</h2>
+      <p>
+        Nogle unge ender i dårlige fællesskaber, fordi de mangler tryghed, støtte eller føler sig udenfor.
+        Det kan være svært at sige nej, hvis man bare gerne vil høre til.
+      </p>
+      <div class="grid">
+        <div class="card" style="box-shadow:none;">
+          <h2 style="font-size:18px;">Social arv</h2>
+          <p class="small">
+            Social arv betyder, at ens opvækst kan påvirke ens muligheder og valg.
+            Det er ikke fordi man er bestemt til noget, men det kan gøre nogle valg sværere.
+          </p>
+        </div>
+        <div class="card" style="box-shadow:none;">
+          <h2 style="font-size:18px;">Socialisering</h2>
+          <p class="small">
+            Socialisering er det, man lærer af familie, skole og venner.
+            Det er her, man lærer normer og grænser.
+          </p>
+        </div>
+      </div>
+      <div class="box-ok">
+        Hvis noget føles forkert, er det okay at reagere på det.
+      </div>
+    </section>
+
+    <section id="tegn" class="card">
+      <h2>Tegn på at noget ikke er okay</h2>
+      <p>
+        Det her er ikke en facitliste, men nogle tegn, der kan vise, at man er under pres.
+      </p>
+      <ul>
+        <li>Du føler dig presset til noget, du ikke har lyst til</li>
+        <li>Du er bange for at sige nej</li>
+        <li>Du holder ting hemmelige, fordi du føler, du skal</li>
+        <li>Du trækker dig fra venner eller familie</li>
+        <li>Der er snak om hurtige penge eller trusler</li>
+      </ul>
+      <div class="box-warn">
+        Hvis du føler dig styret eller kontrolleret af andre, er det vigtigt at reagere.
+      </div>
+    </section>
+
+    <section id="hjælp" class="card">
+      <h2>Hvor kan man få hjælp?</h2>
+      <p>
+        Du behøver ikke fortælle alt på én gang. Det kan starte med én samtale.
+      </p>
+
+      <div class="grid">
+        <div class="card" style="box-shadow:none;">
+          <h2 style="font-size:18px;">På skolen</h2>
+          <ul>
+            <li>Klasselærer</li>
+            <li>Studievejleder eller trivselslærer</li>
+            <li>En anden voksen, du stoler på</li>
+          </ul>
+        </div>
+        <div class="card" style="box-shadow:none;">
+          <h2 style="font-size:18px;">Kommunen</h2>
+          <ul>
+            <li>SSP</li>
+            <li>Unge- eller familierådgivning</li>
+            <li>Anonym rådgivning</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cta" style="margin-top:12px;">
+        <a class="btn" href="tel:114">Ring 114</a>
+        <a class="btn primary" href="tel:112">Ring 112</a>
+      </div>
+
+      <p class="small" style="margin-top:10px;">
+        Du kan også tage en ven med, når du taler med en voksen.
+      </p>
+    </section>
+
+    <footer>
+      Lavet af en 9. klasse som skoleprojekt
+    </footer>
+
+  </main>
+</body>
+</html>
